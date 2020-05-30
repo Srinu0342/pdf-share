@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+  </head>
+  <body>
+    <h1>LOGIN PAGE</h1>
+    <p>{{message}}</p>
+    <form class="" action="/login" method="post">
+      <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+      email:<input type="email" name="email" value="" required><br>
+      password:<input type="password" name="password" value="" required><br>
+      <input type="submit" name="" value="submit">
+    </form>
+  </body>
+</html>

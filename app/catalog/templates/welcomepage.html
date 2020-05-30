@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>WELCOME PAGE</title>
+  </head>
+  <body>
+    <h1>WELCOME PAGE</h1>
+    <h3>USER logged in: {{user}}</h3>
+    {% if not user==None %}
+    <a href="/profile"><button type="button" name="button">Profile</button></a><br><br>
+    {% endif %}
+    <a href="/login"><button type="button" name="button">LOGIN</button></a>
+    <a href="/sign_up"><button type="button" name="button">SIGN UP</button></a>
+  </body>
+</html>

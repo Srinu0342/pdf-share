@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SIGN UP</title>
+  </head>
+  <body>
+    <h1>SIGN UP</h1>
+    <p>{{message}}</p>
+    <form class="" action="/sign_up" method="post">
+      <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+      name:<input type="text" name="name" value="" required><br>
+      email:<input type="email" name="email" value="" required><br>
+      password:<input type="password" name="password" value="" required><br>
+      <input type="submit" name="" value="signup">
+    </form>
+    <br>
+    <a href="/login"><button type="button" name="button">LOGIN</button></a>
+  </body>
+</html>

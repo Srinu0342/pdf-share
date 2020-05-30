@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BOOK UPLOAD</title>
+  </head>
+  <body>
+    <a href="/profile"><button type="button" name="button">HOME</button></a> <br><br>
+    <form class="" method="post" action="/bookupload" enctype="multipart/form-data">
+      <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+      <input type="file" name="file" value=""><br>
+      <br>
+      <input type=submit value=Upload>
+    </form>
+    <table>
+    <thead>
+    <tr>
+        <th>BOOKS</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for row in library %}
+            <tr>
+                <td><a href="/uploads/{{row.storage}}" target="_blank">{{row.storage}}</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+  </body>
+</html>

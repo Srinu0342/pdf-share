@@ -1,0 +1,12 @@
+Flaks app is a complex web application. Creating an flask application with scalable functionalability is something.
+
+there are things that we need to follow.
+
+Generic
+
+whatever you do try to get a resoning, remember you are creating the magic, you can not just go awe and admire the whole thing
+
+WSGI::WEB SERVER GATEWAY INTERFACE
+
+
+https://pythonise.com/series/learning-flask/flask-session-object

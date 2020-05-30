@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration</title>
+  </head>
+  <body><!--
+ <form class="r" action="/register" method="post">
+      {{form.hidden_tag()}}
+      <div class="group">
+        {{form.name.label}}
+        {{form.name}}
+      </div>
+      <div class="group">
+        {{form.email.label}}
+        {{form.email}}
+      </div>
+      <div class="group">
+        {{form.submit()}}
+      </div>
+      <div >
+        {% if name and email %}
+        <p>{{name}}</p>
+        <p>{{email}}</p>
+        <p>{{request.form}}</p> never show this on website
+        {% endif %}
+      </div>
+
+  </form> -->
+      <form class="" action="/register" method="post">
+        <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+        name:<input type="text" name="name" value="">
+        email:<input type="email" name="email" value="">
+        password:<input type="password" name="password" value="">
+        <input type="submit" name="register" value="submit">
+      </form>
+  </body>
+</html>
