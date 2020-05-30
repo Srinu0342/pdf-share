@@ -6,7 +6,7 @@ from app.catalog.models import pdf_storage
 
 
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
-UPLOAD_FOLDER = os.path.abspath('.\\books')
+from configuration.prod import UPLOAD_FOLDER
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -46,6 +46,7 @@ def book_upload():
             return render_template('bookupload.html',library=library)
         else:
             return redirect('/login')
+
 @main.route('/uploads/<filename>')
 def uploaded_file(filename):
     return send_from_directory(UPLOAD_FOLDER,filename)
